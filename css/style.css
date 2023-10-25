@@ -1,0 +1,195 @@
+@charset "utf-8";
+*{padding: 0; margin: 0;}
+li{list-style: none;}
+a{
+    text-decoration: none;
+    display: block;
+    transition: .3s;
+    color: inherit;
+}
+img{display: block;}
+body{color: #333;}
+
+header,footer{width: 100%; height: 100px; background: rgb(242, 247, 242);}
+#header,#footer{
+    width: 1200px;
+    height: 100px;
+    margin: 0 auto;
+    display: flex;
+}
+#header{background: rgb(244, 249, 244); position: relative;}
+#footer{background:rgb(211, 231, 211) ;}
+#slide{width: 1200px; height: 300px; margin: 0 auto; background: green;}
+#contents{width: 1200px; height: 200px; margin: 0 auto; background: rgb(233, 240, 233);}
+
+.logo img{height:40px;}
+.logo{
+    width: 200px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sub{display: none; color: #d6d5d5;} 
+.gnb{display: flex; position: absolute; top: 60px;left: 580px; z-index: 11;}
+.gnb a{
+    width: 151px;
+    line-height: 40px;
+    text-align: center;
+
+}
+/* .gnb:hover .sub{display: block;} */
+.sub a{
+    width: 150px;
+    line-height: 32px;
+    text-align: center;
+}
+
+.gnb li:hover > a{
+    background: #333;
+    color: #fff;
+}
+.sub li:hover > a{
+    background: #fff;
+    color: #333;
+}
+#wrap{position: relative;}
+
+.nav-back{
+    margin: 0 auto;
+    width: 1200px;
+    height: 150px;
+    background: #333;
+    z-index: 10;
+    position: absolute; top: 0; left: 50%;
+    transform: translate(-50%, 0);
+    display: none;
+}
+.gnb{
+    outline: 1px #333 solid; 
+    
+}
+.gnb a{
+    
+    border-right: 1px #333 solid;
+    
+}
+.gnb li:last-child > a {border-right:0;}
+/* .gnb li > a{
+    border-bottom: 0;
+} */
+
+
+/* ------------------------#slide------------------------ */
+#slide{overflow: hidden;}
+#slide ul{width: 400%; display: flex; animation: slide 9s infinite;}
+@keyframes slide{
+    0%{margin-left: 0;}
+    33%{margin-left: -100%;}
+    66%{margin-left: -200%;}
+    100%{margin-left: -300%;}
+
+}
+
+/* -------------------------#contents--------------------- */
+#contents{display: flex;}
+#contents section{
+    box-sizing: border-box;
+    width: 400px;
+    height: 200px;
+    padding: 10px;
+}
+/* #contents section:nth-child(1){
+    background: rgb(228, 237, 228);
+}
+#contents section:nth-child(2){
+    background: rgb(218, 239, 218);
+}
+#contents section:nth-child(3){
+    background: rgb(224, 239, 224);
+} */
+
+.title{line-height: 28px; text-align: center; box-shadow: 0 0 2px #333;}
+.notice a{display: flex; justify-content: space-between; line-height: 29px;
+    font-size: .9em; border-bottom: 1px #939292 solid;}
+.number{width:15%; text-align: center;}
+.subject{width:85%; text-align: left;}
+
+.notice a:hover{
+    background: #333;
+    color: #fff;
+}
+
+
+.gallery img{
+    height: 75px;
+}
+.gallery{display: flex; justify-content: space-evenly; padding-top: 37.5px;}
+.gallery a:hover img{opacity: .5;}
+
+.banner img{
+    height: 75px;
+}
+.banner{display: flex; justify-content: space-between; 
+padding: 37.5px 30px;}
+.banner a:hover img{opacity: .5;}
+.banner p{
+    font-size: .8em;
+    margin-top: 37.5px;
+    color: green;
+    text-align: center;
+}
+.banner p:hover{
+    background: green;
+    color: #fff;
+}
+
+
+/* ---------------------------#footer------------------------- */
+.f-left{width: 1000px; height: 100px; text-align: center;}
+.site{width: 200px;}
+.menu a{display: inline-block; }
+.menu{line-height: 50px;}
+.copy{height: 50px; font-size: .8em;}
+.site select{width: 140px; height: 28px; margin-top: 35px; text-align: center;}
+
+
+
+/* --------------------------#popup----------------------------- */
+#popup{
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,.8);
+    position: fixed;
+    left: 0; top: 0;
+    z-index: 100;
+    display: none;
+}
+.popup-body{
+    width: 600px;
+    height: 400px;
+    background: #fff;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+}
+.popup-body h3{
+    line-height: 80px;
+    text-align: center;
+}
+.popup-body p{
+    line-height: 23px;
+}
+.close{
+    width: 90px;
+    height: 32px;
+    border-radius: 10px;
+    font-size: 1.2em;
+    margin-top: 30px;
+    margin-left: 400px;
+}
+.close:hover{
+    background: #333;
+    color: #fff;
+}
